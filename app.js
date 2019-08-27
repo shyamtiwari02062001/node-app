@@ -9,7 +9,7 @@ var path=require('path')
 /* Configuration to connect to database */
 
 
-const connectionString ="postgres://st:shyam02@localhost:5432"
+const connectionString =(process.env.pg_URI ||"postgres://st:shyam02@localhost:5432")
 
 const client = new Client({
     connectionString:connectionString
